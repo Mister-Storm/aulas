@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Clientes</title>
+</head>
+<body>
+    <h3>Listar Clientes</h3>
+    <tr th:each="cliente: ${clientes}">
+        <td><span th:text="${cliente.nomeCompleto}"></span></td>
+        <td><span th:text="${cliente.loja}"></span></td>
+        <td><span th:text="${cliente.email}"></span></td>
+        <td><span th:text="${cliente.login}"></span></td>
+        <td><span th:text="${cliente.senha}"></span></td>
+    </br>
+    </tr>
+    </br>
+<a href="/cliente/formulario">Incluir Novo</a>
+</body>
+</html>
